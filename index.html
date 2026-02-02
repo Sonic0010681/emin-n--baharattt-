@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TÜMER NATUREL | Doğanın Saf İksiri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* GENEL STİL ve DEĞİŞKENLER */
+        :root {
+            --altin-ana: #D4AF37;
+            --altin-acik: #F4E8C1;
+            --altin-koyu: #B8860B;
+            --yesil-ana: #2E8B57;
+            --yesil-koyu: #1A5D3A;
+            --siyah: #1a1a1a;
+            --beyaz: #FAF9F6;
+            --gri: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            color: var(--gri);
+            background-color: var(--beyaz);
+            overflow-x: hidden;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* ALTIN-YEŞİL GEÇİŞLİ HERO ALANI */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, 
+                        var(--yesil-koyu) 0%, 
+                        var(--yesil-ana) 25%, 
+                        var(--altin-koyu) 50%, 
+                        var(--altin-ana) 75%, 
+                        var(--altin-acik) 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--beyaz);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 40px;
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            max-width: 900px;
+        }
+
+        .main-title {
+            font-size: 5.5rem;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, var(--altin-acik), var(--altin-ana), var(--yesil-ana));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: var(--altin-acik);
+        }
+
+        /* RESİM GALERİSİ */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .gallery-item {
+            height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.4s;
+            background-color: #f5f5f5;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-15px);
+        }
+
+        .img-fallback {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #666;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* ÜRÜN İÇERİK KUTUSU */
+        .product-content {
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            margin: 40px 0;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+            border-top: 8px solid var(--yesil-ana);
+        }
+
+        .ingredients-list {
+            columns: 3;
+            margin: 25px 0;
+            column-gap: 40px;
+        }
+
+        .ingredient-item {
+            background: #f8f9fa;
+            padding: 12px 18px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--altin-ana);
+            break-inside: avoid;
+        }
+
+        .warning-box {
+            background: #fff8e1;
+            border-left: 6px solid #ff9800;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* ŞİRKET BİLGİLERİ */
+        .company-info-box {
+            background: linear-gradient(135deg, var(--yesil-koyu), var(--siyah));
+            color: white;
+            padding: 40px;
+            border-radius: 25px;
+            margin: 40px 0;
+            border: 3px solid var(--altin-ana);
+        }
+
+        /* LÜKS SATIN AL BUTONU */
+        .cta-button {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 22px 55px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--siyah);
+            background: linear-gradient(45deg, var(--altin-ana), var(--altin-acik), var(--altin-ana));
+            border-radius: 60px;
+            border: 3px solid var(--altin-koyu);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5),
+                        inset 0 2px 5px rgba(255, 255, 255, 0.8);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.8),
+                        inset 0 2px 5px rgba(255, 255, 255, 0.9);
+            letter-spacing: 4px;
+            color: var(--yesil-koyu);
+        }
+
+        /* BÖLÜM STİLLERİ */
+        .section-title {
+            text-align: center;
+            font-size: 3.2rem;
+            margin-bottom: 60px;
+            position: relative;
+            color: var(--yesil-koyu);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 5px;
+            background: linear-gradient(to right, var(--yesil-ana), var(--altin-ana));
+            border-radius: 5px;
+        }
+
+        /* HİKAYE BÖLÜMÜ */
+        .story-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .story-text {
+            flex: 1;
+            min-width: 300px;
+            font-size: 1.15rem;
+            text-align: justify;
+        }
+
+        .story-text p {
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: var(--altin-koyu);
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .story-image {
+            flex: 1;
+            min-width: 300px;
+            height: 450px;
+            border-radius: 20px;
+            background: linear-gradient(45deg, var(--yesil-ana), var(--altin-ana));
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .story-image::before {
+            content: '100% Doğal';
+            position: absolute;
+            top: 30px;
+            right: -70px;
+            background: var(--yesil-koyu);
+            color: var(--beyaz);
+            padding: 15px 80px;
+            transform: rotate(45deg);
+            font-weight: 700;
+            letter-spacing: 2px;
+            z-index: 3;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(to right, var(--yesil-koyu), var(--siyah));
+            color: var(--beyaz);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--altin-acik), var(--altin-ana));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .contact-info {
+            margin: 30px 0;
+            font-size: 1.1rem;
+            line-height: 2.2;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        /* RESPONSIVE AYARLAR */
+        @media (max-width: 992px) {
+            .main-title { font-size: 4.2rem; }
+            .section-title { font-size: 2.7rem; }
+            .ingredients-list { columns: 2; }
+            .gallery { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .main-title { font-size: 3.2rem; }
+            .tagline { font-size: 1.4rem; }
+            .section-title { font-size: 2.3rem; }
+            .hero-content { padding: 30px 20px; }
+            .cta-button { padding: 18px 40px; font-size: 1.2rem; margin-bottom: 15px; }
+            section { padding: 60px 0; }
+            .ingredients-list { columns: 1; }
+            .gallery { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .main-title { font-size: 2.5rem; }
+            .tagline { font-size: 1.1rem; }
+            .section-title { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO / KARŞILAMA BÖLÜMÜ -->
+    <header class="hero" id="anasayfa">
+        <div class="hero-content">
+            <h1 class="main-title">TÜMER NATUREL</h1>
+            <p class="tagline">Doğanın Saf İksiri, Şifanın Gerçek Adresi</p>
+            <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 30px; color: #f0f0f0;">
+                SUDEM LOKMAN HEKİM geleneğinden gelen binlerce yıllık şifalı bitki bilgisiyle, 
+                tamamen doğal, katkısız ve şifa dolu ürünlerimizle hayatınıza değer katıyoruz.
+            </p>
+            
+            <!-- SADECE TRENDYOL BUTONU -->
+            <a href="https://partner.trendyol.com/product-listing/approval-period" target="_blank" class="cta-button">
+                <i class="fas fa-shopping-basket"></i> HEMEN SATIN AL
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- ÜRÜN İÇERİĞİ -->
+        <section id="urun">
+            <h2 class="section-title">DOĞAL KARIŞIMIMIZ</h2>
+            
+            <div class="product-content">
+                <div class="warning-box">
+                    <strong><i class="fas fa-exclamation-triangle"></i> ÖNEMLİ:</strong> 
+                    Koruyucu, Kıvam Arttırıcı ve diğer kimyasal maddeler İÇERMEZ. 
+                    Tamamen doğal bitkilerden oluşmaktadır.
+                </div>
+                
+                <h3 style="color: var(--yesil-koyu); margin: 30px 0 20px; font-size: 2rem;">
+                    <i class="fas fa-seedling"></i> İÇİNDEKİLER:
+                </h3>
+                
+                <div class="ingredients-list">
+                    <div class="ingredient-item">Zencefil (Zingiber Officinale)</div>
+                    <div class="ingredient-item">Zerdeçal (Curcuma Longa)</div>
+                    <div class="ingredient-item">Çörek Otu (Nigella Sativa)</div>
+                    <div class="ingredient-item">Üzüm Çekirdeği (Vitis Vinifera)</div>
+                    <div class="ingredient-item">Işgın Otu (Rheum Ribes L)</div>
+                    <div class="ingredient-item">Mahlep (Cerasus Mahaleb)</div>
+                    <div class="ingredient-item">Tarçın (Cinnamomum)</div>
+                    <div class="ingredient-item">Rezene (Foeniculum Vulgare)</div>
+                    <div class="ingredient-item">Sinameki Bitkisi (Cassia Angustifolia)</div>
+                    <div class="ingredient-item">Çam Sakızı (Pix Regine)</div>
+                    <div class="ingredient-item">Sandaloz Sakızı (Pistacia Lentiscus)</div>
+                    <div class="ingredient-item">Kimyon (Cuminum Cyminum L)</div>
+                    <div class="ingredient-item">Hardal Tohumu (Sinapis Arvensis)</div>
+                    <div class="ingredient-item">Hibiskus (Hibiscus Sabdariffa)</div>
+                    <div class="ingredient-item">Bamya Tohumu (Abelmoschus Esculentus)</div>
+                    <div class="ingredient-item">Zeytin Yaprağı (Olea Europaea L)</div>
+                    <div class="ingredient-item">Kara Halile (Terminalia Chebula)</div>
+                </div>
+                
+                <h3 style="color: var(--yesil-koyu); margin: 40px 0 20px; font-size: 2rem;">
+                    <i class="fas fa-info-circle"></i> KULLANIM ŞEKLİ:
+                </h3>
+                <p style="font-size: 1.3rem; background: #f0f9f0; padding: 25px; border-radius: 15px; border-left: 5px solid var(--altin-ana);">
+                    <strong>Sabah ve akşam aç karnına</strong>, iki yemek kaşığı yoğurda bir şeker kaşığı karışım ekleyip 
+                    tüketilmesi önerilir. Yemeklerden <strong>45 dakika önce</strong> alınması tavsiye edilir.
+                </p>
+            </div>
+        </section>
+
+        <!-- RESİM GALERİSİ -->
+        <section id="galeri">
+            <h2 class="section-title">ÜRÜN GALERİMİZ</h2>
+            <div class="gallery">
+                <div class="gallery-item" style="background-image: url('resim1.jpeg');">
+                    <div class="img-fallback">Resim 1</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('resim2.jpeg');">
+                    <div class="img-fallback">Resim 2</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('resim3.jpeg');">
+                    <div class="img-fallback">Resim 3</div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 20px; color: var(--gri); font-style: italic;">
+                Ürünlerimizin doğal ve saf hallerini gösteren görseller
+            </p>
+        </section>
+
+        <!-- ŞİRKET BİLGİLERİ -->
+        <section id="iletisim">
+            <h2 class="section-title">RESMİ BİLGİLER</h2>
+            
+            <div class="company-info-box">
+                <h3 style="color: var(--altin-ana); margin-bottom: 30px; font-size: 2.2rem;">
+                    <i class="fas fa-building"></i> FİRMA BİLGİLERİ
+                </h3>
+                <p style="font-size: 1.25rem; line-height: 2.2; margin-bottom: 25px;">
+                    <strong>SUDEM LOKMAN HEKİM ŞİFALI BİTKİLER BAHARAT GIDA<br>
+                    SAN. Tic. LTD. ŞTİ.</strong><br>
+                    Gimat Toptancılar Sitesi 10. Blok No: 302<br>
+                    Macunköy / ANKARA - TÜRKİYE
+                </p>
+                
+                <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 15px; margin: 30px 0;">
+                    <h4 style="color: var(--altin-acik); margin-bottom: 20px; font-size: 1.8rem;">
+                        <i class="fas fa-truck"></i> DİSTRİBÜTÖR:
+                    </h4>
+                    <p style="font-size: 1.3rem; line-height: 2.2;">
+                        <strong style="color: var(--altin-acik);">TÜMER NATUREL</strong><br>
+                        Taşpazar Mahallesi 817. Sokak No: 61A AKSARAY<br>
+                        <i class="fas fa-phone"></i> Tel: <strong>0534 218 16 55</strong><br>
+                        <i class="fas fa-envelope"></i> E-posta: <strong>mehmet.tumer6834@gmail.com</strong>
+                    </p>
+                </div>
+                
+                <p style="font-style: italic; color: #e0e0e0; margin-top: 30px; font-size: 1.1rem;">
+                    "Binlerce yıllık şifalı bitki bilgisiyle, modern hijyen standartlarını birleştiriyoruz. 
+                    Her ürünümüz, doğallığından ve kalitesinden ödün vermeden, büyük bir özenle hazırlanmaktadır."
+                </p>
+            </div>
+        </section>
+
+        <!-- HİKAYEMİZ BÖLÜMÜ -->
+        <section id="hikayemiz">
+            <h2 class="section-title">HİKAYEMİZ</h2>
+            <div class="story-content">
+                <div class="story-text">
+                    <p><span class="highlight">TÜMER NATUREL</span> olarak, SUDEM LOKMAN HEKİM geleneğinin modern temsilcileri olarak, 
+                    atalarımızdan miras kalan şifalı bitki bilgisini günümüze taşıyoruz.</p>
+                    <p>Doğanın iyileştirici gücüne olan inancımızla, <span class="highlight">tamamen doğal, katkısız ve 
+                    kimyasal içermeyen</span> ürünler geliştiriyoruz. Her bir bitkiyi özenle seçiyor, 
+                    geleneksel yöntemlerle işliyor ve size en saf haliyle ulaştırıyoruz.</p>
+                    <p>Amacımız, modern yaşamın stresli temposunda kaybettiğimiz <span class="highlight">doğal dengeyi</span> 
+                    yeniden kurabilmek ve vücudumuzun kendi kendini iyileştirme kapasitesini 
+                    desteklemektir.</p>
+                </div>
+                <div class="story-image">
+                    %100 Doğal Üretim
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">TÜMER NATUREL</div>
+            <p class="tagline" style="color: var(--altin-acik); margin-bottom: 10px;">Doğanın İyileştirici Gücü</p>
+            
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Taşpazar Mah. 817 Sok. No:61A, Aksaray</p>
+                <p><i class="fas fa-phone"></i> 0534 218 16 55</p>
+                <p><i class="fas fa-envelope"></i> mehmet.tumer6834@gmail.com</p>
+            </div>
+            
+            <p style="max-width: 600px; margin: 30px auto; color: #ccc; font-style: italic;">
+                "Doğanın saf iyiliğini, en doğal haliyle sizlere ulaştırmak için çalışıyoruz. 
+                Geleneksel şifa bilgisiyle, modern yaşamın ihtiyaçlarını buluşturuyoruz."
+            </p>
+            
+            <!-- TÜM ÜRÜNLERİ GÖR BUTONU -->
+            <a href="https://partner.trendyol.com/product-listing/approval-period" target="_blank" 
+               style="display: inline-block; margin-top: 20px; padding: 18px 45px; 
+                      background-color: var(--altin-ana); color: var(--siyah); 
+                      text-decoration: none; font-weight: bold; border-radius: 50px; 
+                      border: 2px solid white; font-size: 1.1rem;">
+                <i class="fas fa-store"></i> TRENDYOL MAĞAZAMIZI ZİYARET EDİN
+            </a>
+            
+            <p class="copyright">
+                © 2025 TÜMER NATUREL. Tüm hakları saklıdır.<br>
+                SUDEM LOKMAN HEKİM geleneğinin modern temsilcisi
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Sayfa yüklendiğinde çalışacak
+        window.addEventListener('load', function() {
+            console.log('TÜMER NATUREL sitesi tamamen yüklendi');
+            document.body.style.opacity = '1';
+            
+            // Resim yüklenmeme kontrolü
+            var images = document.querySelectorAll('.gallery-item');
+            images.forEach(function(img, index) {
+                var bgImage = img.style.backgroundImage;
+                if (bgImage && bgImage !== 'none') {
+                    var imageUrl = bgImage.replace(/url\(['"]?(.*?)['"]?\)/i, '$1');
+                    var tempImage = new Image();
+                    tempImage.onerror = function() {
+                        img.style.backgroundImage = 'none';
+                        img.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#666;font-weight:bold;font-size:1.5rem;">Ürün Görseli ' + (index + 1) + '</div>';
+                    };
+                    tempImage.src = imageUrl;
+                }
+            });
+        });
+
+        // DOM yüklendiğinde çalışacak
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM yüklendi');
+        });
+    </script>
+</body>
+</html>
